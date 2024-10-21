@@ -1,8 +1,6 @@
 {
   "scopeName": "extended.string.directives.spa",
-  "injectionSelector": [
-      "L:string.quoted"
-    ],
+  "injectionSelector": "L:(meta.embedded.block.javascript | meta.embedded.block.typescript | source.js | source.ts | source.tsx | source.vue | source.svelte | source.astro) -string -comment",
   "patterns": [
     {
       "include": "#use-client-directive"
@@ -13,12 +11,14 @@
   ],
   "repository": {
     "use-client-directive": {
-      "match": "use client",
+      "begin": "\\s*(\\buse client\\b)",
+      "end": "('|\")",
       "name": "string.quoted.directive.client"
     },
     "use-server-directive": {
-      "match": "use client",
-      "name": "string.quoted.directive.server"
+      "begin": "\\s*'{1}(\\bNOT_NOW\\b)",
+      "end": "(?=['|\"])",
+      "name": "string.quoted.directive.client"
     }
   }
 }
