@@ -1,0 +1,24 @@
+{
+  "scopeName": "extended.string.directives.spa",
+  "injectionSelector": [
+      "L:string.quoted"
+    ],
+  "patterns": [
+    {
+      "include": "#use-client-directive"
+    },
+    {
+      "include": "#use-server-directive"
+    }
+  ],
+  "repository": {
+    "use-client-directive": {
+      "match": "use client",
+      "name": "string.quoted.directive.client"
+    },
+    "use-server-directive": {
+      "match": "use client",
+      "name": "string.quoted.directive.server"
+    }
+  }
+}

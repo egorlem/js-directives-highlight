@@ -1,0 +1,33 @@
+{
+  "name": "ultima-js-syntax",
+  "displayName": "ultima-js-syntax",
+  "publisher": "guezwhoz-schema",
+  "license": "MIT",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/SPADirective/spa-directive.json",
+        "scopeName": "extended.string.directives.spa",
+        "injectTo": [
+          "source.js",
+          "source.ts",
+          "source.tsx",
+          "source.jsx"
+        ]
+      },
+      {
+        "path": "./syntaxes/TypeScriptDirective/ts-directives.json",
+        "scopeName": "comment.ts.directives",
+        "injectTo": [
+          "source.ts",
+          "source.tsx"
+        ]
+      }
+    ]
+  }
+}
